@@ -2,7 +2,10 @@
 
 > Octokit plugin to rename a branch in a github repository
 
-# :construction: [WORK IN PROGRESS](https://github.com/gr2m/octokit-rename-branch/pull/1)
+[![@latest](https://img.shields.io/npm/v/octokit-rename-branch.svg)](https://www.npmjs.com/package/octokit-rename-branch)
+[![Build Status](https://travis-ci.org/gr2m/octokit-rename-branch.svg?branch=master)](https://travis-ci.org/gr2m/octokit-rename-branch)
+[![Coverage Status](https://coveralls.io/repos/github/gr2m/octokit-rename-branch/badge.svg)](https://coveralls.io/github/gr2m/octokit-rename-branch)
+[![Greenkeeper](https://badges.greenkeeper.io/gr2m/octokit-rename-branch.svg)](https://greenkeeper.io/)
 
 ## Usage
 
