@@ -1,0 +1,1226 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "baseUrl": "https://api.github.com",
+      "headers": {
+        "accept": "application/vnd.github.v3+json",
+        "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
+        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958"
+      },
+      "request": {
+        "validate": {
+          "owner": {
+            "required": true,
+            "type": "string"
+          },
+          "ref": {
+            "required": true,
+            "type": "string"
+          },
+          "repo": {
+            "required": true,
+            "type": "string"
+          }
+        }
+      },
+      "url": "/repos/:owner/:repo/git/refs/:ref",
+      "owner": "gr2m",
+      "repo": "rename-branch-test",
+      "ref": "heads/master"
+    },
+    "response": {
+      "data": {
+        "ref": "refs/heads/master",
+        "node_id": "MDM6UmVmMTU4NDU0NTAwOm1hc3Rlcg==",
+        "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs/heads/master",
+        "object": {
+          "sha": "104850f4bd27b567da87cfe76cc68b64575365f5",
+          "type": "commit",
+          "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits/104850f4bd27b567da87cfe76cc68b64575365f5"
+        }
+      },
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type",
+        "cache-control": "private, max-age=60, s-maxage=60",
+        "connection": "close",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Nov 2018 21:39:13 GMT",
+        "etag": "W/\"f0d62dfff91a392c083bba6c85aa403c\"",
+        "last-modified": "Tue, 20 Nov 2018 21:38:49 GMT",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "server": "GitHub.com",
+        "status": "200 OK",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "transfer-encoding": "chunked",
+        "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding",
+        "x-accepted-oauth-scopes": "repo",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-github-media-type": "github.v3; format=json",
+        "x-github-request-id": "F35D:5AFB:12F116:181401:5BF47F00",
+        "x-oauth-scopes": "repo",
+        "x-poll-interval": "300",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "4869",
+        "x-ratelimit-reset": "1542750414",
+        "x-xss-protection": "1; mode=block"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "baseUrl": "https://api.github.com",
+      "headers": {
+        "accept": "application/vnd.github.v3+json",
+        "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
+        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "request": {
+        "validate": {
+          "owner": {
+            "required": true,
+            "type": "string"
+          },
+          "ref": {
+            "required": true,
+            "type": "string"
+          },
+          "repo": {
+            "required": true,
+            "type": "string"
+          },
+          "sha": {
+            "required": true,
+            "type": "string"
+          }
+        }
+      },
+      "url": "/repos/:owner/:repo/git/refs",
+      "owner": "gr2m",
+      "repo": "rename-branch-test",
+      "ref": "refs/heads/latest",
+      "sha": "104850f4bd27b567da87cfe76cc68b64575365f5"
+    },
+    "response": {
+      "data": {
+        "ref": "refs/heads/latest",
+        "node_id": "MDM6UmVmMTU4NDU0NTAwOmxhdGVzdA==",
+        "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs/heads/latest",
+        "object": {
+          "sha": "104850f4bd27b567da87cfe76cc68b64575365f5",
+          "type": "commit",
+          "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits/104850f4bd27b567da87cfe76cc68b64575365f5"
+        }
+      },
+      "status": 201,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type",
+        "cache-control": "private, max-age=60, s-maxage=60",
+        "connection": "close",
+        "content-length": "345",
+        "content-security-policy": "default-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Nov 2018 21:39:13 GMT",
+        "etag": "\"aa9c54e9c3aef9fa657d9e772f13701d\"",
+        "location": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs/heads/latest",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "server": "GitHub.com",
+        "status": "201 Created",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding",
+        "x-accepted-oauth-scopes": "repo",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-github-media-type": "github.v3; format=json",
+        "x-github-request-id": "F360:5AFC:1AD23D:220336:5BF47F01",
+        "x-oauth-scopes": "repo",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "4868",
+        "x-ratelimit-reset": "1542750414",
+        "x-xss-protection": "1; mode=block"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "PATCH",
+      "baseUrl": "https://api.github.com",
+      "headers": {
+        "accept": "application/vnd.github.v3+json",
+        "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
+        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "request": {
+        "validate": {
+          "allow_merge_commit": {
+            "type": "boolean"
+          },
+          "allow_rebase_merge": {
+            "type": "boolean"
+          },
+          "allow_squash_merge": {
+            "type": "boolean"
+          },
+          "archived": {
+            "type": "boolean"
+          },
+          "default_branch": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "has_issues": {
+            "type": "boolean"
+          },
+          "has_projects": {
+            "type": "boolean"
+          },
+          "has_wiki": {
+            "type": "boolean"
+          },
+          "homepage": {
+            "type": "string"
+          },
+          "name": {
+            "required": true,
+            "type": "string"
+          },
+          "owner": {
+            "required": true,
+            "type": "string"
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "repo": {
+            "required": true,
+            "type": "string"
+          }
+        }
+      },
+      "url": "/repos/:owner/:repo",
+      "owner": "gr2m",
+      "repo": "rename-branch-test",
+      "name": "rename-branch-test",
+      "default_branch": "latest"
+    },
+    "response": {
+      "data": {
+        "id": 158454500,
+        "node_id": "MDEwOlJlcG9zaXRvcnkxNTg0NTQ1MDA=",
+        "name": "rename-branch-test",
+        "full_name": "gr2m/rename-branch-test",
+        "private": true,
+        "owner": {
+          "login": "gr2m",
+          "id": 39992,
+          "node_id": "MDQ6VXNlcjM5OTky",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/gr2m",
+          "html_url": "https://github.com/gr2m",
+          "followers_url": "https://api.github.com/users/gr2m/followers",
+          "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+          "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+          "organizations_url": "https://api.github.com/users/gr2m/orgs",
+          "repos_url": "https://api.github.com/users/gr2m/repos",
+          "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/gr2m/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/gr2m/rename-branch-test",
+        "description": null,
+        "fork": false,
+        "url": "https://api.github.com/repos/gr2m/rename-branch-test",
+        "forks_url": "https://api.github.com/repos/gr2m/rename-branch-test/forks",
+        "keys_url": "https://api.github.com/repos/gr2m/rename-branch-test/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/gr2m/rename-branch-test/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/gr2m/rename-branch-test/teams",
+        "hooks_url": "https://api.github.com/repos/gr2m/rename-branch-test/hooks",
+        "issue_events_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/gr2m/rename-branch-test/events",
+        "assignees_url": "https://api.github.com/repos/gr2m/rename-branch-test/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/gr2m/rename-branch-test/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/tags",
+        "blobs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/gr2m/rename-branch-test/languages",
+        "stargazers_url": "https://api.github.com/repos/gr2m/rename-branch-test/stargazers",
+        "contributors_url": "https://api.github.com/repos/gr2m/rename-branch-test/contributors",
+        "subscribers_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscribers",
+        "subscription_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscription",
+        "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/gr2m/rename-branch-test/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/gr2m/rename-branch-test/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/gr2m/rename-branch-test/merges",
+        "archive_url": "https://api.github.com/repos/gr2m/rename-branch-test/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/gr2m/rename-branch-test/downloads",
+        "issues_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/gr2m/rename-branch-test/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/gr2m/rename-branch-test/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/gr2m/rename-branch-test/labels{/name}",
+        "releases_url": "https://api.github.com/repos/gr2m/rename-branch-test/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/gr2m/rename-branch-test/deployments",
+        "created_at": "2018-11-20T21:38:45Z",
+        "updated_at": "2018-11-20T21:38:49Z",
+        "pushed_at": "2018-11-20T21:39:13Z",
+        "git_url": "git://github.com/gr2m/rename-branch-test.git",
+        "ssh_url": "git@github.com:gr2m/rename-branch-test.git",
+        "clone_url": "https://github.com/gr2m/rename-branch-test.git",
+        "svn_url": "https://github.com/gr2m/rename-branch-test",
+        "homepage": null,
+        "size": 0,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": null,
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "open_issues_count": 1,
+        "license": null,
+        "forks": 0,
+        "open_issues": 1,
+        "watchers": 0,
+        "default_branch": "latest",
+        "permissions": {
+          "admin": true,
+          "push": true,
+          "pull": true
+        },
+        "allow_squash_merge": true,
+        "allow_merge_commit": true,
+        "allow_rebase_merge": true,
+        "network_count": 0,
+        "subscribers_count": 0
+      },
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type",
+        "cache-control": "private, max-age=60, s-maxage=60",
+        "connection": "close",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Nov 2018 21:39:14 GMT",
+        "etag": "W/\"118765724abbfc45866deee5ce0bddf8\"",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "server": "GitHub.com",
+        "status": "200 OK",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "transfer-encoding": "chunked",
+        "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding",
+        "x-accepted-oauth-scopes": "",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-github-media-type": "github.v3; format=json",
+        "x-github-request-id": "F365:5AFC:1AD2C7:2203EC:5BF47F02",
+        "x-oauth-scopes": "repo",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "4867",
+        "x-ratelimit-reset": "1542750414",
+        "x-xss-protection": "1; mode=block"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "baseUrl": "https://api.github.com",
+      "headers": {
+        "accept": "application/vnd.github.v3+json",
+        "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
+        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958"
+      },
+      "request": {
+        "validate": {
+          "base": {
+            "type": "string"
+          },
+          "direction": {
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "type": "string"
+          },
+          "head": {
+            "type": "string"
+          },
+          "owner": {
+            "required": true,
+            "type": "string"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "repo": {
+            "required": true,
+            "type": "string"
+          },
+          "sort": {
+            "enum": [
+              "created",
+              "updated",
+              "popularity",
+              "long-running"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "open",
+              "closed",
+              "all"
+            ],
+            "type": "string"
+          }
+        }
+      },
+      "url": "/repos/:owner/:repo/pulls",
+      "owner": "gr2m",
+      "repo": "rename-branch-test",
+      "state": "open",
+      "base": "master",
+      "page": 1
+    },
+    "response": {
+      "data": [
+        {
+          "url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1",
+          "id": 232467472,
+          "node_id": "MDExOlB1bGxSZXF1ZXN0MjMyNDY3NDcy",
+          "html_url": "https://github.com/gr2m/rename-branch-test/pull/1",
+          "diff_url": "https://github.com/gr2m/rename-branch-test/pull/1.diff",
+          "patch_url": "https://github.com/gr2m/rename-branch-test/pull/1.patch",
+          "issue_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1",
+          "number": 1,
+          "state": "open",
+          "locked": false,
+          "title": "Update README.md",
+          "user": {
+            "login": "gr2m",
+            "id": 39992,
+            "node_id": "MDQ6VXNlcjM5OTky",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gr2m",
+            "html_url": "https://github.com/gr2m",
+            "followers_url": "https://api.github.com/users/gr2m/followers",
+            "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+            "organizations_url": "https://api.github.com/users/gr2m/orgs",
+            "repos_url": "https://api.github.com/users/gr2m/repos",
+            "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gr2m/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "body": "\n\n-----\n[View rendered README.md](https://github.com/gr2m/rename-branch-test/blob/gr2m-patch-1/README.md)",
+          "created_at": "2018-11-20T21:39:08Z",
+          "updated_at": "2018-11-20T21:39:10Z",
+          "closed_at": null,
+          "merged_at": null,
+          "merge_commit_sha": "7f8d054fd11eace9936b13d971c5ba4dee373859",
+          "assignee": null,
+          "assignees": [],
+          "requested_reviewers": [],
+          "requested_teams": [],
+          "labels": [],
+          "milestone": null,
+          "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/commits",
+          "review_comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/comments",
+          "review_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/comments{/number}",
+          "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1/comments",
+          "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/08e1086a7961d135d55bcb403a26c7886f4fa9d1",
+          "head": {
+            "label": "gr2m:gr2m-patch-1",
+            "ref": "gr2m-patch-1",
+            "sha": "08e1086a7961d135d55bcb403a26c7886f4fa9d1",
+            "user": {
+              "login": "gr2m",
+              "id": 39992,
+              "node_id": "MDQ6VXNlcjM5OTky",
+              "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/gr2m",
+              "html_url": "https://github.com/gr2m",
+              "followers_url": "https://api.github.com/users/gr2m/followers",
+              "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+              "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+              "organizations_url": "https://api.github.com/users/gr2m/orgs",
+              "repos_url": "https://api.github.com/users/gr2m/repos",
+              "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/gr2m/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "repo": {
+              "id": 158454500,
+              "node_id": "MDEwOlJlcG9zaXRvcnkxNTg0NTQ1MDA=",
+              "name": "rename-branch-test",
+              "full_name": "gr2m/rename-branch-test",
+              "private": true,
+              "owner": {
+                "login": "gr2m",
+                "id": 39992,
+                "node_id": "MDQ6VXNlcjM5OTky",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/gr2m",
+                "html_url": "https://github.com/gr2m",
+                "followers_url": "https://api.github.com/users/gr2m/followers",
+                "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+                "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+                "organizations_url": "https://api.github.com/users/gr2m/orgs",
+                "repos_url": "https://api.github.com/users/gr2m/repos",
+                "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/gr2m/received_events",
+                "type": "User",
+                "site_admin": false
+              },
+              "html_url": "https://github.com/gr2m/rename-branch-test",
+              "description": null,
+              "fork": false,
+              "url": "https://api.github.com/repos/gr2m/rename-branch-test",
+              "forks_url": "https://api.github.com/repos/gr2m/rename-branch-test/forks",
+              "keys_url": "https://api.github.com/repos/gr2m/rename-branch-test/keys{/key_id}",
+              "collaborators_url": "https://api.github.com/repos/gr2m/rename-branch-test/collaborators{/collaborator}",
+              "teams_url": "https://api.github.com/repos/gr2m/rename-branch-test/teams",
+              "hooks_url": "https://api.github.com/repos/gr2m/rename-branch-test/hooks",
+              "issue_events_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/events{/number}",
+              "events_url": "https://api.github.com/repos/gr2m/rename-branch-test/events",
+              "assignees_url": "https://api.github.com/repos/gr2m/rename-branch-test/assignees{/user}",
+              "branches_url": "https://api.github.com/repos/gr2m/rename-branch-test/branches{/branch}",
+              "tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/tags",
+              "blobs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/blobs{/sha}",
+              "git_tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/tags{/sha}",
+              "git_refs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs{/sha}",
+              "trees_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/trees{/sha}",
+              "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/{sha}",
+              "languages_url": "https://api.github.com/repos/gr2m/rename-branch-test/languages",
+              "stargazers_url": "https://api.github.com/repos/gr2m/rename-branch-test/stargazers",
+              "contributors_url": "https://api.github.com/repos/gr2m/rename-branch-test/contributors",
+              "subscribers_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscribers",
+              "subscription_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscription",
+              "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/commits{/sha}",
+              "git_commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits{/sha}",
+              "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/comments{/number}",
+              "issue_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/comments{/number}",
+              "contents_url": "https://api.github.com/repos/gr2m/rename-branch-test/contents/{+path}",
+              "compare_url": "https://api.github.com/repos/gr2m/rename-branch-test/compare/{base}...{head}",
+              "merges_url": "https://api.github.com/repos/gr2m/rename-branch-test/merges",
+              "archive_url": "https://api.github.com/repos/gr2m/rename-branch-test/{archive_format}{/ref}",
+              "downloads_url": "https://api.github.com/repos/gr2m/rename-branch-test/downloads",
+              "issues_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues{/number}",
+              "pulls_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls{/number}",
+              "milestones_url": "https://api.github.com/repos/gr2m/rename-branch-test/milestones{/number}",
+              "notifications_url": "https://api.github.com/repos/gr2m/rename-branch-test/notifications{?since,all,participating}",
+              "labels_url": "https://api.github.com/repos/gr2m/rename-branch-test/labels{/name}",
+              "releases_url": "https://api.github.com/repos/gr2m/rename-branch-test/releases{/id}",
+              "deployments_url": "https://api.github.com/repos/gr2m/rename-branch-test/deployments",
+              "created_at": "2018-11-20T21:38:45Z",
+              "updated_at": "2018-11-20T21:38:49Z",
+              "pushed_at": "2018-11-20T21:39:13Z",
+              "git_url": "git://github.com/gr2m/rename-branch-test.git",
+              "ssh_url": "git@github.com:gr2m/rename-branch-test.git",
+              "clone_url": "https://github.com/gr2m/rename-branch-test.git",
+              "svn_url": "https://github.com/gr2m/rename-branch-test",
+              "homepage": null,
+              "size": 0,
+              "stargazers_count": 0,
+              "watchers_count": 0,
+              "language": null,
+              "has_issues": true,
+              "has_projects": true,
+              "has_downloads": true,
+              "has_wiki": true,
+              "has_pages": false,
+              "forks_count": 0,
+              "mirror_url": null,
+              "archived": false,
+              "open_issues_count": 1,
+              "license": null,
+              "forks": 0,
+              "open_issues": 1,
+              "watchers": 0,
+              "default_branch": "latest"
+            }
+          },
+          "base": {
+            "label": "gr2m:master",
+            "ref": "master",
+            "sha": "104850f4bd27b567da87cfe76cc68b64575365f5",
+            "user": {
+              "login": "gr2m",
+              "id": 39992,
+              "node_id": "MDQ6VXNlcjM5OTky",
+              "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/gr2m",
+              "html_url": "https://github.com/gr2m",
+              "followers_url": "https://api.github.com/users/gr2m/followers",
+              "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+              "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+              "organizations_url": "https://api.github.com/users/gr2m/orgs",
+              "repos_url": "https://api.github.com/users/gr2m/repos",
+              "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/gr2m/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "repo": {
+              "id": 158454500,
+              "node_id": "MDEwOlJlcG9zaXRvcnkxNTg0NTQ1MDA=",
+              "name": "rename-branch-test",
+              "full_name": "gr2m/rename-branch-test",
+              "private": true,
+              "owner": {
+                "login": "gr2m",
+                "id": 39992,
+                "node_id": "MDQ6VXNlcjM5OTky",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/gr2m",
+                "html_url": "https://github.com/gr2m",
+                "followers_url": "https://api.github.com/users/gr2m/followers",
+                "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+                "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+                "organizations_url": "https://api.github.com/users/gr2m/orgs",
+                "repos_url": "https://api.github.com/users/gr2m/repos",
+                "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/gr2m/received_events",
+                "type": "User",
+                "site_admin": false
+              },
+              "html_url": "https://github.com/gr2m/rename-branch-test",
+              "description": null,
+              "fork": false,
+              "url": "https://api.github.com/repos/gr2m/rename-branch-test",
+              "forks_url": "https://api.github.com/repos/gr2m/rename-branch-test/forks",
+              "keys_url": "https://api.github.com/repos/gr2m/rename-branch-test/keys{/key_id}",
+              "collaborators_url": "https://api.github.com/repos/gr2m/rename-branch-test/collaborators{/collaborator}",
+              "teams_url": "https://api.github.com/repos/gr2m/rename-branch-test/teams",
+              "hooks_url": "https://api.github.com/repos/gr2m/rename-branch-test/hooks",
+              "issue_events_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/events{/number}",
+              "events_url": "https://api.github.com/repos/gr2m/rename-branch-test/events",
+              "assignees_url": "https://api.github.com/repos/gr2m/rename-branch-test/assignees{/user}",
+              "branches_url": "https://api.github.com/repos/gr2m/rename-branch-test/branches{/branch}",
+              "tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/tags",
+              "blobs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/blobs{/sha}",
+              "git_tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/tags{/sha}",
+              "git_refs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs{/sha}",
+              "trees_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/trees{/sha}",
+              "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/{sha}",
+              "languages_url": "https://api.github.com/repos/gr2m/rename-branch-test/languages",
+              "stargazers_url": "https://api.github.com/repos/gr2m/rename-branch-test/stargazers",
+              "contributors_url": "https://api.github.com/repos/gr2m/rename-branch-test/contributors",
+              "subscribers_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscribers",
+              "subscription_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscription",
+              "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/commits{/sha}",
+              "git_commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits{/sha}",
+              "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/comments{/number}",
+              "issue_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/comments{/number}",
+              "contents_url": "https://api.github.com/repos/gr2m/rename-branch-test/contents/{+path}",
+              "compare_url": "https://api.github.com/repos/gr2m/rename-branch-test/compare/{base}...{head}",
+              "merges_url": "https://api.github.com/repos/gr2m/rename-branch-test/merges",
+              "archive_url": "https://api.github.com/repos/gr2m/rename-branch-test/{archive_format}{/ref}",
+              "downloads_url": "https://api.github.com/repos/gr2m/rename-branch-test/downloads",
+              "issues_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues{/number}",
+              "pulls_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls{/number}",
+              "milestones_url": "https://api.github.com/repos/gr2m/rename-branch-test/milestones{/number}",
+              "notifications_url": "https://api.github.com/repos/gr2m/rename-branch-test/notifications{?since,all,participating}",
+              "labels_url": "https://api.github.com/repos/gr2m/rename-branch-test/labels{/name}",
+              "releases_url": "https://api.github.com/repos/gr2m/rename-branch-test/releases{/id}",
+              "deployments_url": "https://api.github.com/repos/gr2m/rename-branch-test/deployments",
+              "created_at": "2018-11-20T21:38:45Z",
+              "updated_at": "2018-11-20T21:38:49Z",
+              "pushed_at": "2018-11-20T21:39:13Z",
+              "git_url": "git://github.com/gr2m/rename-branch-test.git",
+              "ssh_url": "git@github.com:gr2m/rename-branch-test.git",
+              "clone_url": "https://github.com/gr2m/rename-branch-test.git",
+              "svn_url": "https://github.com/gr2m/rename-branch-test",
+              "homepage": null,
+              "size": 0,
+              "stargazers_count": 0,
+              "watchers_count": 0,
+              "language": null,
+              "has_issues": true,
+              "has_projects": true,
+              "has_downloads": true,
+              "has_wiki": true,
+              "has_pages": false,
+              "forks_count": 0,
+              "mirror_url": null,
+              "archived": false,
+              "open_issues_count": 1,
+              "license": null,
+              "forks": 0,
+              "open_issues": 1,
+              "watchers": 0,
+              "default_branch": "latest"
+            }
+          },
+          "_links": {
+            "self": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1"
+            },
+            "html": {
+              "href": "https://github.com/gr2m/rename-branch-test/pull/1"
+            },
+            "issue": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1"
+            },
+            "comments": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1/comments"
+            },
+            "review_comments": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/comments"
+            },
+            "review_comment": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/comments{/number}"
+            },
+            "commits": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/commits"
+            },
+            "statuses": {
+              "href": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/08e1086a7961d135d55bcb403a26c7886f4fa9d1"
+            }
+          },
+          "author_association": "OWNER"
+        }
+      ],
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type",
+        "cache-control": "private, max-age=60, s-maxage=60",
+        "connection": "close",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Nov 2018 21:39:15 GMT",
+        "etag": "W/\"20f21b997f8069c7c0b40ad39ab357a1\"",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "server": "GitHub.com",
+        "status": "200 OK",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "transfer-encoding": "chunked",
+        "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding",
+        "x-accepted-oauth-scopes": "",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-github-media-type": "github.v3; format=json",
+        "x-github-request-id": "F36A:5AFB:12F1CE:1814EE:5BF47F03",
+        "x-oauth-scopes": "repo",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "4866",
+        "x-ratelimit-reset": "1542750414",
+        "x-xss-protection": "1; mode=block"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "PATCH",
+      "baseUrl": "https://api.github.com",
+      "headers": {
+        "accept": "application/vnd.github.v3+json",
+        "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
+        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "request": {
+        "validate": {
+          "base": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "maintainer_can_modify": {
+            "type": "boolean"
+          },
+          "number": {
+            "required": true,
+            "type": "integer"
+          },
+          "owner": {
+            "required": true,
+            "type": "string"
+          },
+          "repo": {
+            "required": true,
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "open",
+              "closed"
+            ],
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      },
+      "url": "/repos/:owner/:repo/pulls/:number",
+      "owner": "gr2m",
+      "repo": "rename-branch-test",
+      "number": 1,
+      "base": "latest"
+    },
+    "response": {
+      "data": {
+        "url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1",
+        "id": 232467472,
+        "node_id": "MDExOlB1bGxSZXF1ZXN0MjMyNDY3NDcy",
+        "html_url": "https://github.com/gr2m/rename-branch-test/pull/1",
+        "diff_url": "https://github.com/gr2m/rename-branch-test/pull/1.diff",
+        "patch_url": "https://github.com/gr2m/rename-branch-test/pull/1.patch",
+        "issue_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1",
+        "number": 1,
+        "state": "open",
+        "locked": false,
+        "title": "Update README.md",
+        "user": {
+          "login": "gr2m",
+          "id": 39992,
+          "node_id": "MDQ6VXNlcjM5OTky",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/gr2m",
+          "html_url": "https://github.com/gr2m",
+          "followers_url": "https://api.github.com/users/gr2m/followers",
+          "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+          "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+          "organizations_url": "https://api.github.com/users/gr2m/orgs",
+          "repos_url": "https://api.github.com/users/gr2m/repos",
+          "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/gr2m/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "\n\n-----\n[View rendered README.md](https://github.com/gr2m/rename-branch-test/blob/gr2m-patch-1/README.md)",
+        "created_at": "2018-11-20T21:39:08Z",
+        "updated_at": "2018-11-20T21:39:15Z",
+        "closed_at": null,
+        "merged_at": null,
+        "merge_commit_sha": "7f8d054fd11eace9936b13d971c5ba4dee373859",
+        "assignee": null,
+        "assignees": [],
+        "requested_reviewers": [],
+        "requested_teams": [],
+        "labels": [],
+        "milestone": null,
+        "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/commits",
+        "review_comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/comments",
+        "review_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1/comments",
+        "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/08e1086a7961d135d55bcb403a26c7886f4fa9d1",
+        "head": {
+          "label": "gr2m:gr2m-patch-1",
+          "ref": "gr2m-patch-1",
+          "sha": "08e1086a7961d135d55bcb403a26c7886f4fa9d1",
+          "user": {
+            "login": "gr2m",
+            "id": 39992,
+            "node_id": "MDQ6VXNlcjM5OTky",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gr2m",
+            "html_url": "https://github.com/gr2m",
+            "followers_url": "https://api.github.com/users/gr2m/followers",
+            "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+            "organizations_url": "https://api.github.com/users/gr2m/orgs",
+            "repos_url": "https://api.github.com/users/gr2m/repos",
+            "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gr2m/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 158454500,
+            "node_id": "MDEwOlJlcG9zaXRvcnkxNTg0NTQ1MDA=",
+            "name": "rename-branch-test",
+            "full_name": "gr2m/rename-branch-test",
+            "private": true,
+            "owner": {
+              "login": "gr2m",
+              "id": 39992,
+              "node_id": "MDQ6VXNlcjM5OTky",
+              "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/gr2m",
+              "html_url": "https://github.com/gr2m",
+              "followers_url": "https://api.github.com/users/gr2m/followers",
+              "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+              "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+              "organizations_url": "https://api.github.com/users/gr2m/orgs",
+              "repos_url": "https://api.github.com/users/gr2m/repos",
+              "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/gr2m/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/gr2m/rename-branch-test",
+            "description": null,
+            "fork": false,
+            "url": "https://api.github.com/repos/gr2m/rename-branch-test",
+            "forks_url": "https://api.github.com/repos/gr2m/rename-branch-test/forks",
+            "keys_url": "https://api.github.com/repos/gr2m/rename-branch-test/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/gr2m/rename-branch-test/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/gr2m/rename-branch-test/teams",
+            "hooks_url": "https://api.github.com/repos/gr2m/rename-branch-test/hooks",
+            "issue_events_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/gr2m/rename-branch-test/events",
+            "assignees_url": "https://api.github.com/repos/gr2m/rename-branch-test/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/gr2m/rename-branch-test/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/tags",
+            "blobs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/gr2m/rename-branch-test/languages",
+            "stargazers_url": "https://api.github.com/repos/gr2m/rename-branch-test/stargazers",
+            "contributors_url": "https://api.github.com/repos/gr2m/rename-branch-test/contributors",
+            "subscribers_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscribers",
+            "subscription_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscription",
+            "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/gr2m/rename-branch-test/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/gr2m/rename-branch-test/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/gr2m/rename-branch-test/merges",
+            "archive_url": "https://api.github.com/repos/gr2m/rename-branch-test/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/gr2m/rename-branch-test/downloads",
+            "issues_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/gr2m/rename-branch-test/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/gr2m/rename-branch-test/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/gr2m/rename-branch-test/labels{/name}",
+            "releases_url": "https://api.github.com/repos/gr2m/rename-branch-test/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/gr2m/rename-branch-test/deployments",
+            "created_at": "2018-11-20T21:38:45Z",
+            "updated_at": "2018-11-20T21:38:49Z",
+            "pushed_at": "2018-11-20T21:39:13Z",
+            "git_url": "git://github.com/gr2m/rename-branch-test.git",
+            "ssh_url": "git@github.com:gr2m/rename-branch-test.git",
+            "clone_url": "https://github.com/gr2m/rename-branch-test.git",
+            "svn_url": "https://github.com/gr2m/rename-branch-test",
+            "homepage": null,
+            "size": 0,
+            "stargazers_count": 0,
+            "watchers_count": 0,
+            "language": null,
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "open_issues_count": 1,
+            "license": null,
+            "forks": 0,
+            "open_issues": 1,
+            "watchers": 0,
+            "default_branch": "latest"
+          }
+        },
+        "base": {
+          "label": "gr2m:latest",
+          "ref": "latest",
+          "sha": "104850f4bd27b567da87cfe76cc68b64575365f5",
+          "user": {
+            "login": "gr2m",
+            "id": 39992,
+            "node_id": "MDQ6VXNlcjM5OTky",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gr2m",
+            "html_url": "https://github.com/gr2m",
+            "followers_url": "https://api.github.com/users/gr2m/followers",
+            "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+            "organizations_url": "https://api.github.com/users/gr2m/orgs",
+            "repos_url": "https://api.github.com/users/gr2m/repos",
+            "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gr2m/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 158454500,
+            "node_id": "MDEwOlJlcG9zaXRvcnkxNTg0NTQ1MDA=",
+            "name": "rename-branch-test",
+            "full_name": "gr2m/rename-branch-test",
+            "private": true,
+            "owner": {
+              "login": "gr2m",
+              "id": 39992,
+              "node_id": "MDQ6VXNlcjM5OTky",
+              "avatar_url": "https://avatars3.githubusercontent.com/u/39992?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/gr2m",
+              "html_url": "https://github.com/gr2m",
+              "followers_url": "https://api.github.com/users/gr2m/followers",
+              "following_url": "https://api.github.com/users/gr2m/following{/other_user}",
+              "gists_url": "https://api.github.com/users/gr2m/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/gr2m/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/gr2m/subscriptions",
+              "organizations_url": "https://api.github.com/users/gr2m/orgs",
+              "repos_url": "https://api.github.com/users/gr2m/repos",
+              "events_url": "https://api.github.com/users/gr2m/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/gr2m/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/gr2m/rename-branch-test",
+            "description": null,
+            "fork": false,
+            "url": "https://api.github.com/repos/gr2m/rename-branch-test",
+            "forks_url": "https://api.github.com/repos/gr2m/rename-branch-test/forks",
+            "keys_url": "https://api.github.com/repos/gr2m/rename-branch-test/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/gr2m/rename-branch-test/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/gr2m/rename-branch-test/teams",
+            "hooks_url": "https://api.github.com/repos/gr2m/rename-branch-test/hooks",
+            "issue_events_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/gr2m/rename-branch-test/events",
+            "assignees_url": "https://api.github.com/repos/gr2m/rename-branch-test/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/gr2m/rename-branch-test/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/tags",
+            "blobs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/gr2m/rename-branch-test/languages",
+            "stargazers_url": "https://api.github.com/repos/gr2m/rename-branch-test/stargazers",
+            "contributors_url": "https://api.github.com/repos/gr2m/rename-branch-test/contributors",
+            "subscribers_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscribers",
+            "subscription_url": "https://api.github.com/repos/gr2m/rename-branch-test/subscription",
+            "commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/gr2m/rename-branch-test/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/gr2m/rename-branch-test/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/gr2m/rename-branch-test/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/gr2m/rename-branch-test/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/gr2m/rename-branch-test/merges",
+            "archive_url": "https://api.github.com/repos/gr2m/rename-branch-test/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/gr2m/rename-branch-test/downloads",
+            "issues_url": "https://api.github.com/repos/gr2m/rename-branch-test/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/gr2m/rename-branch-test/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/gr2m/rename-branch-test/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/gr2m/rename-branch-test/labels{/name}",
+            "releases_url": "https://api.github.com/repos/gr2m/rename-branch-test/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/gr2m/rename-branch-test/deployments",
+            "created_at": "2018-11-20T21:38:45Z",
+            "updated_at": "2018-11-20T21:38:49Z",
+            "pushed_at": "2018-11-20T21:39:13Z",
+            "git_url": "git://github.com/gr2m/rename-branch-test.git",
+            "ssh_url": "git@github.com:gr2m/rename-branch-test.git",
+            "clone_url": "https://github.com/gr2m/rename-branch-test.git",
+            "svn_url": "https://github.com/gr2m/rename-branch-test",
+            "homepage": null,
+            "size": 0,
+            "stargazers_count": 0,
+            "watchers_count": 0,
+            "language": null,
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "open_issues_count": 1,
+            "license": null,
+            "forks": 0,
+            "open_issues": 1,
+            "watchers": 0,
+            "default_branch": "latest"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1"
+          },
+          "html": {
+            "href": "https://github.com/gr2m/rename-branch-test/pull/1"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/issues/1/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/pulls/1/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/gr2m/rename-branch-test/statuses/08e1086a7961d135d55bcb403a26c7886f4fa9d1"
+          }
+        },
+        "author_association": "OWNER",
+        "merged": false,
+        "mergeable": null,
+        "rebaseable": null,
+        "mergeable_state": "unknown",
+        "merged_by": null,
+        "comments": 0,
+        "review_comments": 0,
+        "maintainer_can_modify": false,
+        "commits": 1,
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type",
+        "cache-control": "private, max-age=60, s-maxage=60",
+        "connection": "close",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Nov 2018 21:39:16 GMT",
+        "etag": "W/\"33349e28bc00d0e90cb6ded14165d658\"",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "server": "GitHub.com",
+        "status": "200 OK",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "transfer-encoding": "chunked",
+        "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding",
+        "x-accepted-oauth-scopes": "",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-github-media-type": "github.v3; format=json",
+        "x-github-request-id": "F36D:5AFC:1AD39E:220503:5BF47F03",
+        "x-oauth-scopes": "repo",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "4865",
+        "x-ratelimit-reset": "1542750414",
+        "x-xss-protection": "1; mode=block"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "DELETE",
+      "baseUrl": "https://api.github.com",
+      "headers": {
+        "accept": "application/vnd.github.v3+json",
+        "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
+        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "content-length": 0
+      },
+      "request": {
+        "validate": {
+          "owner": {
+            "required": true,
+            "type": "string"
+          },
+          "ref": {
+            "required": true,
+            "type": "string"
+          },
+          "repo": {
+            "required": true,
+            "type": "string"
+          }
+        }
+      },
+      "url": "/repos/:owner/:repo/git/refs/:ref",
+      "owner": "gr2m",
+      "repo": "rename-branch-test",
+      "ref": "heads/master"
+    },
+    "response": {
+      "status": 204,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type",
+        "connection": "close",
+        "content-security-policy": "default-src 'none'",
+        "content-type": "application/octet-stream",
+        "date": "Tue, 20 Nov 2018 21:39:17 GMT",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "server": "GitHub.com",
+        "status": "204 No Content",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "vary": "Accept-Encoding",
+        "x-accepted-oauth-scopes": "repo",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-github-media-type": "github.v3; format=json",
+        "x-github-request-id": "F372:5AFB:12F244:181581:5BF47F04",
+        "x-oauth-scopes": "repo",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "4864",
+        "x-ratelimit-reset": "1542750414",
+        "x-xss-protection": "1; mode=block"
+      }
+    }
+  }
+]
