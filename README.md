@@ -2,7 +2,7 @@
 
 > Octokit plugin to rename a branch in a github repository
 
-# :construction: [WORK IN PROGRESS](https;//github.com/gr2m/octokit-rename-branch/pull/1)
+# :construction: [WORK IN PROGRESS](https://github.com/gr2m/octokit-rename-branch/pull/1)
 
 ## Usage
 
