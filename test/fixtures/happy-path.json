@@ -6,7 +6,7 @@
       "headers": {
         "accept": "application/vnd.github.v3+json",
         "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
-        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958"
+        "authorization": "token secret"
       },
       "request": {
         "validate": {
@@ -79,7 +79,7 @@
       "headers": {
         "accept": "application/vnd.github.v3+json",
         "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
-        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "authorization": "token secret",
         "content-type": "application/json; charset=utf-8"
       },
       "request": {
@@ -156,7 +156,7 @@
       "headers": {
         "accept": "application/vnd.github.v3+json",
         "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
-        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "authorization": "token secret",
         "content-type": "application/json; charset=utf-8"
       },
       "request": {
@@ -355,7 +355,7 @@
       "headers": {
         "accept": "application/vnd.github.v3+json",
         "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
-        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958"
+        "authorization": "token secret"
       },
       "request": {
         "validate": {
@@ -765,7 +765,7 @@
       "headers": {
         "accept": "application/vnd.github.v3+json",
         "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
-        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "authorization": "token secret",
         "content-type": "application/json; charset=utf-8"
       },
       "request": {
@@ -1172,7 +1172,7 @@
       "headers": {
         "accept": "application/vnd.github.v3+json",
         "user-agent": "octokit.js/16.0.1 Node.js/10.13.0 (macOS Mojave; x64)",
-        "authorization": "token b4be5a771ca4c091ad4a8e7ef6508cd887af7958",
+        "authorization": "token secret",
         "content-length": 0
       },
       "request": {
