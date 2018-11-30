@@ -33,8 +33,8 @@ octokit.renameBranch({
 1. Creates a new reference using the `sha` of the last commit of `current_branch`
    ([`POST /repos/:owner/:repo/git/refs`](https://developer.github.com/v3/git/refs/#create-a-reference))
 2. Updates the default branch of the repository ([`PATCH /repos/:owner/:repo`](https://developer.github.com/v3/repos/#edit))
-3. Updates the default branch of the repository ([`PATCH /repos/:owner/:repo`](https://developer.github.com/v3/repos/#edit))
-4. Updates branch protection to the new branch name if applicable.
+3. Updates branch protection to the new branch name if applicable ([GraphQL mutation `updateBranchProtectionRule`](https://developer.github.com/v4/mutation/updatebranchprotectionrule/))
+4. Look for open pull requests and update the base branch if it’s `current_branch` ([`PATCH /repos/:owner/:repo/pulls/:number`](https://developer.github.com/v3/pulls/#update-a-pull-request))
 5. Delete `current_branch` ([`DELETE /repos/:owner/:repo/git/refs/:ref`](https://developer.github.com/v3/git/refs/#delete-a-reference))
 
 ## Motivation
