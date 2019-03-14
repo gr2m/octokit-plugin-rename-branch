@@ -517,12 +517,7 @@
           }
         }
       },
-      "url": "/repos/:owner/:repo/pulls",
-      "owner": "gr2m",
-      "repo": "rename-branch-test",
-      "state": "open",
-      "base": "master",
-      "page": 1
+      "url": "https://api.github.com/repos/gr2m/rename-branch-test/pulls?state=open&base=master"
     },
     "response": {
       "data": [
