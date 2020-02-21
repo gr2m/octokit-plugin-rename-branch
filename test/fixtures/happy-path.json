@@ -24,7 +24,7 @@
           }
         }
       },
-      "url": "/repos/:owner/:repo/git/refs/:ref",
+      "url": "/repos/:owner/:repo/git/ref/:ref",
       "owner": "gr2m",
       "repo": "rename-branch-test",
       "ref": "heads/master"
@@ -33,7 +33,7 @@
       "data": {
         "ref": "refs/heads/master",
         "node_id": "MDM6UmVmMTU5NzQ2NTAyOm1hc3Rlcg==",
-        "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs/heads/master",
+        "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/ref/heads/master",
         "object": {
           "sha": "8cd861c253f08eac2aa3c19eb197876025190b26",
           "type": "commit",
@@ -112,7 +112,7 @@
       "data": {
         "ref": "refs/heads/latest",
         "node_id": "MDM6UmVmMTU5NzQ2NTAyOmxhdGVzdA==",
-        "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs/heads/latest",
+        "url": "https://api.github.com/repos/gr2m/rename-branch-test/git/ref/heads/latest",
         "object": {
           "sha": "8cd861c253f08eac2aa3c19eb197876025190b26",
           "type": "commit",
@@ -130,7 +130,7 @@
         "content-type": "application/json; charset=utf-8",
         "date": "Fri, 30 Nov 2018 00:48:01 GMT",
         "etag": "\"b36267d0b58748d1f82cf272be14abc2\"",
-        "location": "https://api.github.com/repos/gr2m/rename-branch-test/git/refs/heads/latest",
+        "location": "https://api.github.com/repos/gr2m/rename-branch-test/git/ref/heads/latest",
         "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
         "server": "GitHub.com",
         "status": "201 Created",
@@ -360,7 +360,11 @@
       },
       "request": {},
       "url": "/graphql",
-      "query": "{\n    repository(owner:\"gr2m\",name:\"rename-branch-test\") {\n      branchProtectionRules(first:100) {\n        nodes {\n          id\n          pattern\n        }\n      }\n    }\n  }"
+      "query": "query($owner: String!, $repo: String!) {\n    repository(owner:$owner,name:$repo) {\n      branchProtectionRules(first:100) {\n        nodes {\n          id\n          pattern\n        }\n      }\n    }\n  }",
+      "variables": {
+        "owner": "gr2m",
+        "repo": "rename-branch-test"
+      }
     },
     "response": {
       "data": {
@@ -418,7 +422,11 @@
       },
       "request": {},
       "url": "/graphql",
-      "query": "mutation {\n      updateBranchProtectionRule (input:{branchProtectionRuleId:\"MDIwOkJyYW5jaFByb3RlY3Rpb25SdWxlMjkwOTg0NA==\",pattern:\"latest\"}) {\n        branchProtectionRule {\n          id,\n          pattern\n        }\n      }\n    }"
+      "query": "mutation($branchProtectionRuleId:ID!,$pattern:String!) {\n      updateBranchProtectionRule (input:{branchProtectionRuleId:$branchProtectionRuleId,pattern:$pattern}) {\n        branchProtectionRule {\n          id,\n          pattern\n        }\n      }\n    }",
+      "variables": {
+        "branchProtectionRuleId": "MDIwOkJyYW5jaFByb3RlY3Rpb25SdWxlMjkwOTg0NA==",
+        "pattern": "latest"
+      }
     },
     "response": {
       "data": {
@@ -475,10 +483,7 @@
             "type": "string"
           },
           "direction": {
-            "enum": [
-              "asc",
-              "desc"
-            ],
+            "enum": ["asc", "desc"],
             "type": "string"
           },
           "head": {
@@ -499,20 +504,11 @@
             "type": "string"
           },
           "sort": {
-            "enum": [
-              "created",
-              "updated",
-              "popularity",
-              "long-running"
-            ],
+            "enum": ["created", "updated", "popularity", "long-running"],
             "type": "string"
           },
           "state": {
-            "enum": [
-              "open",
-              "closed",
-              "all"
-            ],
+            "enum": ["open", "closed", "all"],
             "type": "string"
           }
         }
@@ -1212,10 +1208,7 @@
             "type": "string"
           },
           "state": {
-            "enum": [
-              "open",
-              "closed"
-            ],
+            "enum": ["open", "closed"],
             "type": "string"
           },
           "title": {
@@ -1223,7 +1216,7 @@
           }
         }
       },
-      "url": "/repos/:owner/:repo/pulls/:number",
+      "url": "/repos/:owner/:repo/pulls/:pull_number",
       "owner": "gr2m",
       "repo": "rename-branch-test",
       "number": 2,
@@ -1619,10 +1612,7 @@
             "type": "string"
           },
           "state": {
-            "enum": [
-              "open",
-              "closed"
-            ],
+            "enum": ["open", "closed"],
             "type": "string"
           },
           "title": {
@@ -1630,7 +1620,7 @@
           }
         }
       },
-      "url": "/repos/:owner/:repo/pulls/:number",
+      "url": "/repos/:owner/:repo/pulls/:pull_number",
       "owner": "gr2m",
       "repo": "rename-branch-test",
       "number": 1,
