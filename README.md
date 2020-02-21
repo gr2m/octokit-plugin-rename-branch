@@ -9,23 +9,24 @@
 
 ## Usage
 
-Install with `npm install @octokit/rest octokit-rename-branch`
+Install with `npm install @octokit/core octokit-rename-branch`
 
 ```js
-const Octokit = require('@octokit/rest')
-  .plugin(require('octokit-rename-branch'))
-const octokit = new Octokit()
+const { Octokit } = require("@octokit/core");
+const renameBranch = require("octokit-rename-branch");
 
-octokit.authenticate({
-  type: 'token',
-  token:
-})
+const MyOctokit = Octokit.plugin(renameBranch);
+const octokit = new MyOctokit({
+  // create token at https://github.com/settings/tokens/new
+  auth: "my-token-123"
+});
+
 octokit.renameBranch({
-  owner: 'octocat',
-  repo: 'hello-world',
-  current_name: 'master',
-  name: 'latest'
-})
+  owner: "octocat",
+  repo: "hello-world",
+  current_name: "master",
+  name: "latest"
+});
 ```
 
 ## How it works
@@ -34,7 +35,7 @@ octokit.renameBranch({
    ([`POST /repos/:owner/:repo/git/refs`](https://developer.github.com/v3/git/refs/#create-a-reference))
 2. Updates the default branch of the repository ([`PATCH /repos/:owner/:repo`](https://developer.github.com/v3/repos/#edit))
 3. Updates branch protection to the new branch name if applicable ([GraphQL mutation `updateBranchProtectionRule`](https://developer.github.com/v4/mutation/updatebranchprotectionrule/))
-4. Look for open pull requests and update the base branch if it’s `current_branch` ([`PATCH /repos/:owner/:repo/pulls/:number`](https://developer.github.com/v3/pulls/#update-a-pull-request))
+4. Look for open pull requests and update the base branch if it’s `current_branch` ([`PATCH /repos/:owner/:repo/pulls/:pull_number`](https://developer.github.com/v3/pulls/#update-a-pull-request))
 5. Delete `current_branch` ([`DELETE /repos/:owner/:repo/git/refs/:ref`](https://developer.github.com/v3/git/refs/#delete-a-reference))
 
 ## Motivation
