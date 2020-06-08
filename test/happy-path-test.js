@@ -5,7 +5,7 @@ const { paginateRest } = require("@octokit/plugin-paginate-rest");
 const renameBranch = require("..");
 const Octokit = Core.plugin([paginateRest, renameBranch]);
 
-test("happy path", async t => {
+test("happy path", async (t) => {
   const fixtures = require("./fixtures/happy-path");
   const octokit = new Octokit();
 
@@ -21,14 +21,10 @@ test("happy path", async t => {
       ...params
     } = options;
 
-    if (currentFixtures.request.url !== options.url) {
-      debugger;
-    }
-
     t.equal(currentFixtures.request.method, options.method, "method matches");
     t.equal(currentFixtures.request.url, options.url, "URL matches");
 
-    Object.keys(params).forEach(paramName => {
+    Object.keys(params).forEach((paramName) => {
       t.deepequal(
         currentFixtures.request[paramName],
         params[paramName],
@@ -43,7 +39,7 @@ test("happy path", async t => {
     owner: "gr2m",
     repo: "rename-branch-test",
     current_name: "master",
-    name: "latest"
+    name: "latest",
   });
 
   t.equal(fixtures.length, 0);
