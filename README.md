@@ -1,17 +1,17 @@
-# octokit-rename-branch
+# octokit-plugin-rename-branch
 
 > Octokit plugin to rename a branch in a github repository
 
-[![@latest](https://img.shields.io/npm/v/octokit-rename-branch.svg)](https://www.npmjs.com/package/octokit-rename-branch)
-[![Build Status](https://github.com/gr2m/octokit-rename-branch/workflows/Test/badge.svg)](https://github.com/gr2m/octokit-rename-branch/actions?query=workflow%3ATest+branch%3Amaster)
+[![@latest](https://img.shields.io/npm/v/octokit-plugin-rename-branch.svg)](https://www.npmjs.com/package/octokit-plugin-rename-branch)
+[![Build Status](https://github.com/gr2m/octokit-plugin-rename-branch/workflows/Test/badge.svg)](https://github.com/gr2m/octokit-plugin-rename-branch/actions?query=workflow%3ATest+branch%3Amaster)
 
 ## Usage
 
-Install with `npm install @octokit/core octokit-rename-branch`
+Install with `npm install @octokit/core octokit-plugin-rename-branch`
 
 ```js
 const { Octokit } = require("@octokit/core");
-const renameBranch = require("octokit-rename-branch");
+const renameBranch = require("octokit-plugin-rename-branch");
 
 const MyOctokit = Octokit.plugin(renameBranch);
 const octokit = new MyOctokit({
