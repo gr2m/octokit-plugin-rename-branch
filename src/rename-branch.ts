@@ -1,8 +1,23 @@
-module.exports = renameBranch;
+import { Octokit } from "@octokit/core";
 
-async function renameBranch(
-  octokit,
-  { owner, repo, current_name: currentName, name }
+type Options = {
+  owner: string;
+  repo: string;
+  current_name: string;
+  name: string;
+};
+
+type Rule = {
+  pattern: string;
+};
+
+type PullRequest = {
+  number: number;
+};
+
+export async function octokitRenameBranch(
+  octokit: Octokit,
+  { owner, repo, current_name: currentName, name }: Options
 ) {
   /* istanbul ignore if */
   if (!octokit.paginate) {
@@ -57,7 +72,7 @@ async function renameBranch(
 
   // there can only be one protection per pattern
   const { id } = branchProtectionRules.find(
-    (rule) => rule.pattern === currentName
+    (rule: Rule) => rule.pattern === currentName
   );
   await octokit.graphql(
     `mutation($branchProtectionRuleId:ID!,$pattern:String!) {
@@ -85,15 +100,18 @@ async function renameBranch(
       base: currentName,
     }
   )) {
-    await pullRequests.reduce(async (promise, { number }) => {
-      await promise;
-      return octokit.request("PATCH /repos/:owner/:repo/pulls/:pull_number", {
-        owner,
-        repo,
-        number,
-        base: name,
-      });
-    }, Promise.resolve());
+    await pullRequests.reduce(
+      async (promise: Promise<any>, { number }: PullRequest) => {
+        await promise;
+        return octokit.request("PATCH /repos/:owner/:repo/pulls/:pull_number", {
+          owner,
+          repo,
+          pull_number: number,
+          base: name,
+        });
+      },
+      Promise.resolve()
+    );
   }
 
   // delete <currentName> branch

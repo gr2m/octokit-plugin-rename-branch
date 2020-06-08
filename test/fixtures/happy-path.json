@@ -1219,7 +1219,7 @@
       "url": "/repos/:owner/:repo/pulls/:pull_number",
       "owner": "gr2m",
       "repo": "rename-branch-test",
-      "number": 2,
+      "pull_number": 2,
       "base": "latest"
     },
     "response": {
@@ -1623,7 +1623,7 @@
       "url": "/repos/:owner/:repo/pulls/:pull_number",
       "owner": "gr2m",
       "repo": "rename-branch-test",
-      "number": 1,
+      "pull_number": 1,
       "base": "latest"
     },
     "response": {
