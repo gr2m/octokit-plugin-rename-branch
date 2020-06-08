@@ -4,7 +4,6 @@
 
 [![@latest](https://img.shields.io/npm/v/octokit-rename-branch.svg)](https://www.npmjs.com/package/octokit-rename-branch)
 [![Build Status](https://travis-ci.com/gr2m/octokit-rename-branch.svg?branch=master)](https://travis-ci.com/gr2m/octokit-rename-branch)
-[![Coverage Status](https://coveralls.io/repos/github/gr2m/octokit-rename-branch/badge.svg)](https://coveralls.io/github/gr2m/octokit-rename-branch)
 [![Greenkeeper](https://badges.greenkeeper.io/gr2m/octokit-rename-branch.svg)](https://greenkeeper.io/)
 
 ## Usage
@@ -18,14 +17,14 @@ const renameBranch = require("octokit-rename-branch");
 const MyOctokit = Octokit.plugin(renameBranch);
 const octokit = new MyOctokit({
   // create token at https://github.com/settings/tokens/new
-  auth: "my-token-123"
+  auth: "my-token-123",
 });
 
 octokit.renameBranch({
   owner: "octocat",
   repo: "hello-world",
   current_name: "master",
-  name: "latest"
+  name: "latest",
 });
 ```
 

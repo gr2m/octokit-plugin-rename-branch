@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report --reporter=html && open coverage/index.html",
-    "coverage:upload": "nyc report --reporter=text-lcov | coveralls",
-    "test": "tap --coverage test/*-test.js"
+    "test": "tap --100 --coverage test/*-test.js"
   },
   "keywords": [
     "octokit",
@@ -19,12 +18,12 @@
   "devDependencies": {
     "@octokit/core": "^2.4.1",
     "@octokit/plugin-paginate-rest": "^2.0.1",
-    "coveralls": "^3.0.2",
     "semantic-release": "^17.0.0",
     "tap": "^14.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gr2m/octokit-rename-branch.git"
-  }
+  },
+  "dependencies": {}
 }
