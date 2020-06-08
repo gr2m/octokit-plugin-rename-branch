@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report --reporter=html && open coverage/index.html",
+    "lint": "prettier --check '{lib,test}/**/*.{js,md}' *.md package.json",
+    "lint:fix": "prettier --write '{lib,test}/**/*.{js,md}' *.md package.json",
+    "pretest": "npm run -s lint",
     "test": "tap --100 --coverage test/*-test.js"
   },
   "keywords": [
@@ -18,6 +21,7 @@
   "devDependencies": {
     "@octokit/core": "^2.4.1",
     "@octokit/plugin-paginate-rest": "^2.0.1",
+    "prettier": "^2.0.5",
     "semantic-release": "^17.0.0",
     "tap": "^14.0.0"
   },
