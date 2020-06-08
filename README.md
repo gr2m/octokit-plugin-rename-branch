@@ -64,12 +64,9 @@ octokit.renameBranch({
 
 ## Motivation
 
-I think `master` is a horrific term. `git` & GitHub should follow the lead of
-tech communities such as [Django](https://github.com/django/django/pull/2692),
-[Drupal](https://www.drupal.org/project/drupal/issues/2275877) and
-[CouchDB](https://issues.apache.org/jira/browse/COUCHDB-2248) and replace
-`master` with non-offensive term, such as `latest`. This library is meant to
-simplify the process of renaming branch names of GitHub repositories.
+This library is meant to simplify the process of renaming branch names of GitHub repositories.
+
+By default, both Git and GitHub use `master` for their main branch. I think Git & GitHub should follow the lead of tech communities such as [Django](https://github.com/django/django/pull/2692), [Drupal](https://www.drupal.org/project/drupal/issues/2275877) and [CouchDB](https://issues.apache.org/jira/browse/COUCHDB-2248) and replace `master` with non-offensive term, such as `latest` or `main`.
 
 ## License
 
