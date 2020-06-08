@@ -1,7 +1,7 @@
 {
   "name": "octokit-plugin-rename-branch",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Octokit plugin to rename a branch in a github repository, its settings, and its code.",
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report --reporter=html && open coverage/index.html",
@@ -21,13 +21,22 @@
   "devDependencies": {
     "@octokit/core": "^2.4.1",
     "@octokit/plugin-paginate-rest": "^2.0.1",
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "semantic-release": "^17.0.0",
-    "tap": "^14.0.0"
+    "ts-jest": "^26.1.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gr2m/octokit-plugin-rename-branch.git"
-  },
-  "dependencies": {}
+  "repository": "https://github.com/gr2m/octokit-plugin-rename-branch",
+  "jest": {
+    "preset": "ts-jest",
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
+  }
 }
