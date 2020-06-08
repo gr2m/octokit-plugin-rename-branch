@@ -4,6 +4,7 @@
   "description": "Octokit plugin to rename a branch in a github repository, its settings, and its code.",
   "main": "index.js",
   "scripts": {
+    "build": "pika build",
     "coverage": "nyc report --reporter=html && open coverage/index.html",
     "lint": "prettier --check '{src,test}/**/*.{ts,md}' *.md package.json tsconfig.json",
     "lint:fix": "prettier --write '{src,test}/**/*.{ts,md}' *.md package.json tsconfig.json",
@@ -21,11 +22,16 @@
   "devDependencies": {
     "@octokit/core": "^2.4.1",
     "@octokit/plugin-paginate-rest": "^2.0.1",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.12",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "semantic-release": "^17.0.0",
+    "semantic-release-plugin-update-version-in-files": "^1.0.0",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
   },
@@ -40,5 +46,41 @@
         "lines": 100
       }
     }
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "./pkg"
+        }
+      ],
+      [
+        "semantic-release-plugin-update-version-in-files",
+        {
+          "files": [
+            "pkg/dist-web/*",
+            "pkg/dist-node/*",
+            "pkg/*/version.*"
+          ]
+        }
+      ]
+    ]
   }
 }
