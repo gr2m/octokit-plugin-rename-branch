@@ -26,8 +26,9 @@ Make sure to run `npm run build`, to make sure the `pkg/` folder is created and 
 ```js
 // my-script.js
 const { Octokit } = require("@octokit/core");
+const { paginateRest } = require("@octokit/plugin-paginate-rest");
 const { renameBranch } = require("./pkg");
-const MyOctokit = Octokit.plugin(renameBranch);
+const MyOctokit = Octokit.plugin(renameBranch, paginateRest);
 const octokit = new MyOctokit({
   auth: process.env.GITHUB_TOKEN,
 });
