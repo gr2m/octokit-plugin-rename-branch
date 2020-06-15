@@ -36,7 +36,7 @@ test("happy path", async () => {
     owner: "gr2m",
     repo: "rename-branch-test",
     current_name: "master",
-    name: "latest",
+    name: "main",
   });
 
   expect(fixtures.length).toEqual(0);
