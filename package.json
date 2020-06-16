@@ -2,10 +2,8 @@
   "name": "octokit-plugin-rename-branch",
   "version": "0.0.0-development",
   "description": "Octokit plugin to rename a branch in a github repository, its settings, and its code.",
-  "main": "index.js",
   "scripts": {
     "build": "pika build",
-    "coverage": "nyc report --reporter=html && open coverage/index.html",
     "lint": "prettier --check '{src,test}/**/*.{ts,md}' *.md package.json tsconfig.json",
     "lint:fix": "prettier --write '{src,test}/**/*.{ts,md}' *.md package.json tsconfig.json",
     "pretest": "npm run -s lint",
@@ -19,6 +17,9 @@
   ],
   "author": "Gregor Martynus (https://github.com/gr2m)",
   "license": "MIT",
+  "peerDependencies": {
+    "@octokit/plugin-paginate-rest": ">= 2"
+  },
   "devDependencies": {
     "@octokit/core": "^3.0.0",
     "@octokit/plugin-paginate-rest": "^2.0.1",

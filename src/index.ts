@@ -5,7 +5,6 @@ import { VERSION } from "./version";
 
 /**
  * @param octokit Octokit instance
- * @param options Options passed to Octokit constructor
  */
 export function renameBranch(octokit: Octokit) {
   octokit.renameBranch = octokitRenameBranch.bind(null, octokit);
