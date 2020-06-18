@@ -71,11 +71,14 @@ export async function octokitRenameBranch(
   } = await octokit.graphql(query, { owner, repo });
 
   // there can only be one protection per pattern
-  const { id } = branchProtectionRules.find(
+  const branchProtection = branchProtectionRules.find(
     (rule: Rule) => rule.pattern === currentName
   );
-  await octokit.graphql(
-    `mutation($branchProtectionRuleId:ID!,$pattern:String!) {
+
+  if (branchProtection) {
+    const { id } = branchProtection;
+    await octokit.graphql(
+      `mutation($branchProtectionRuleId:ID!,$pattern:String!) {
       updateBranchProtectionRule (input:{branchProtectionRuleId:$branchProtectionRuleId,pattern:$pattern}) {
         branchProtectionRule {
           id,
@@ -83,11 +86,12 @@ export async function octokitRenameBranch(
         }
       }
     }`,
-    {
-      branchProtectionRuleId: id,
-      pattern: name,
-    }
-  );
+      {
+        branchProtectionRuleId: id,
+        pattern: name,
+      }
+    );
+  }
 
   // Iterate trough all open pull requests with base = <currentName>
   // and change base to <name>
