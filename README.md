@@ -3,7 +3,7 @@
 > Octokit plugin to rename a branch in a github repository
 
 [![@latest](https://img.shields.io/npm/v/octokit-plugin-rename-branch.svg)](https://www.npmjs.com/package/octokit-plugin-rename-branch)
-[![Build Status](https://github.com/gr2m/octokit-plugin-rename-branch/workflows/Test/badge.svg)](https://github.com/gr2m/octokit-plugin-rename-branch/actions?query=workflow%3ATest+branch%3Amaster)
+[![Build Status](https://github.com/gr2m/octokit-plugin-rename-branch/workflows/Test/badge.svg)](https://github.com/gr2m/octokit-plugin-rename-branch/actions?query=workflow%3ATest+branch%3Amain)
 
 ## Usage
 
@@ -49,7 +49,7 @@ octokit.renameBranch({
   owner: "octocat",
   repo: "hello-world",
   current_name: "master",
-  name: "latest",
+  name: "main",
 });
 ```
 
