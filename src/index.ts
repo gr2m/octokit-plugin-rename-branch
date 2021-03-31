@@ -1,13 +1,16 @@
 import { Octokit } from "@octokit/core";
 
-import { octokitRenameBranch } from "./rename-branch";
+import { composeRenameBranch } from "./rename-branch";
 import { VERSION } from "./version";
 
 /**
  * @param octokit Octokit instance
  */
 export function renameBranch(octokit: Octokit) {
-  octokit.renameBranch = octokitRenameBranch.bind(null, octokit);
+  return {
+    renameBranch: composeRenameBranch.bind(null, octokit),
+  };
 }
-
 renameBranch.VERSION = VERSION;
+
+export { composeRenameBranch } from "./rename-branch";

@@ -18,7 +18,10 @@ Load `octokit-plugin-rename-branch` and [`@octokit/core`](https://github.com/oct
 ```html
 <script type="module">
   import { Octokit } from "https://cdn.pika.dev/@octokit/core";
-  import { renameBranch } from "https://cdn.pika.dev/octokit-plugin-rename-branch";
+  import {
+    renameBranch,
+    composeRenameBranch,
+  } from "https://cdn.pika.dev/octokit-plugin-rename-branch";
 </script>
 ```
 
@@ -31,7 +34,10 @@ Install with `npm install @octokit/core octokit-plugin-rename-branch`. Optionall
 
 ```js
 const { Octokit } = require("@octokit/core");
-const { renameBranch } = require("octokit-plugin-rename-branch");
+const {
+  renameBranch,
+  composeRenameBranch,
+} = require("octokit-plugin-rename-branch");
 ```
 
 </td></tr>
@@ -46,6 +52,17 @@ const octokit = new MyOctokit({
 });
 
 octokit.renameBranch({
+  owner: "octocat",
+  repo: "hello-world",
+  current_name: "master",
+  name: "main",
+});
+```
+
+You can use `composeRenameBranch` directly, too.
+
+```js
+composeRenameBranch(octokit, {
   owner: "octocat",
   repo: "hello-world",
   current_name: "master",
