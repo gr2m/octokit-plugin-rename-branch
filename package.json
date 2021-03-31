@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@octokit/core": "^3.0.0",
-    "@octokit/plugin-paginate-rest": "^2.0.1",
+    "@octokit/plugin-paginate-rest": "^2.13.3",
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.9.2",
     "@pika/plugin-build-web": "^0.9.2",

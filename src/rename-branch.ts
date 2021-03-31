@@ -1,4 +1,5 @@
 import { Octokit } from "@octokit/core";
+import { composePaginateRest } from "@octokit/plugin-paginate-rest";
 
 type Options = {
   owner: string;
@@ -15,17 +16,10 @@ type PullRequest = {
   number: number;
 };
 
-export async function octokitRenameBranch(
+export async function composeRenameBranch(
   octokit: Octokit,
   { owner, repo, current_name: currentName, name }: Options
 ) {
-  /* istanbul ignore if */
-  if (!octokit.paginate) {
-    throw new Error(
-      "[octokit-plugin-rename-branch] The @octokit/plugin-paginate-rest plugin is required"
-    );
-  }
-
   // get ref of last commit to <currentName> branch
   const {
     data: {
@@ -95,7 +89,8 @@ export async function octokitRenameBranch(
 
   // Iterate trough all open pull requests with base = <currentName>
   // and change base to <name>
-  for await (const { data: pullRequests } of octokit.paginate.iterator(
+  for await (const { data: pullRequests } of composePaginateRest.iterator(
+    octokit,
     "GET /repos/:owner/:repo/pulls",
     {
       owner,
@@ -105,6 +100,7 @@ export async function octokitRenameBranch(
     }
   )) {
     await pullRequests.reduce(
+      // @ts-expect-error composePaginateRest.iterator does not return correct types yet
       async (promise: Promise<any>, { number }: PullRequest) => {
         await promise;
         return octokit.request("PATCH /repos/:owner/:repo/pulls/:pull_number", {
