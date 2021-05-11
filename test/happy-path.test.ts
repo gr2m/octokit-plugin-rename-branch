@@ -10,15 +10,8 @@ test("happy path", async () => {
 
   octokit.hook.wrap("request", (_, options) => {
     const currentFixtures = fixtures.shift();
-    const {
-      baseUrl,
-      method,
-      url,
-      request,
-      headers,
-      mediaType,
-      ...params
-    } = options;
+    const { baseUrl, method, url, request, headers, mediaType, ...params } =
+      options;
 
     expect(currentFixtures.request.method).toEqual(options.method);
     expect(currentFixtures.request.url).toEqual(options.url);
