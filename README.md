@@ -1,3 +1,7 @@
+# ⚠️ This plugin has been archived.
+
+GitHub introduced an [API to rename a branch](https://docs.github.com/en/rest/reference/repos#rename-a-branch) which implements most, if not all, what this plugin used to do.
+
 # octokit-plugin-rename-branch
 
 > Octokit plugin to rename a branch in a github repository
